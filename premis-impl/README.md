@@ -58,3 +58,5 @@ mvn --% exec:java -Dexec.mainClass=com.example.PremisJaxbV3Generator2 -Dexec.arg
 mvn --% exec:java -Dexec.mainClass=com.example.PremisCombinedGenerator -Dexec.args="D:/JDPS/premis-impl-project/ODHC010879122024 D:/JDPS/premis-impl-project/ODHC010879122024/odhc_premis_combined.xml"
 
 mvn --% exec:java -Dexec.mainClass=com.example.ListPremisClasses
+
+mvn --% exec:java -Dexec.mainClass=com.example.xmlgenerator.PremisXmlGenerator -Dexec.args="D:/JDPS/premis-impl-project/ODHC010879122024 D:/JDPS/premis-impl-project/ODHC010879122024/odhc_premis.xml"
