@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<premis:premis xmlns:premis="http://www.loc.gov/premis/v3"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.loc.gov/premis/v3 http://www.loc.gov/standards/premis/premis-3-0.xsd"
+               version="3.0">
+
+  <!-- Intellectual object representing the whole SIP -->
+  <premis:intellectualObject>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>CNR</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>ODHC010879122024</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCharacteristics>
+      <premis:compositionLevel>1</premis:compositionLevel>
+    </premis:objectCharacteristics>
+    <premis:significantProperties>Case SIP</premis:significantProperties>
+  </premis:intellectualObject>
+
+  <!-- Agents -->
+  <premis:agent>
+    <premis:agentIdentifier>
+      <premis:agentIdentifierType>system</premis:agentIdentifierType>
+      <premis:agentIdentifierValue>JTDR</premis:agentIdentifierValue>
+    </premis:agentIdentifier>
+    <premis:agentName>JTDR</premis:agentName>
+    <premis:agentType>software</premis:agentType>
+  </premis:agent>
+
+  <!-- Depositor -->
+  <premis:agent>
+    <premis:agentIdentifier>
+      <premis:agentIdentifierType>depositor</premis:agentIdentifierType>
+      <premis:agentIdentifierValue>uploader@example.org</premis:agentIdentifierValue>
+    </premis:agentIdentifier>
+    <premis:agentName>Case Uploader</premis:agentName>
+    <premis:agentType>human</premis:agentType>
+  </premis:agent>
+
+  <!-- Rights (simple example) -->
+  <premis:rights>
+    <premis:rightsStatement>
+      <premis:rightsBasis>statute</premis:rightsBasis>
+      <premis:rightsGranted>Access restricted to authorized user</premis:rightsGranted>
+    </premis:rightsStatement>
+  </premis:rights>
+
+  <!-- File objects -->
+  <!-- metadata XML -->
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>FilePath</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>data/metadata/ODHC012342025_Metadata_ecourt.xml</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCharacteristics>
+      <premis:compositionLevel>0</premis:compositionLevel>
+      <premis:size>&lt;SIZE_BYTES_METADATA&gt;</premis:size>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>SHA-256</premis:messageDigestAlgorithm>
+        <premis:messageDigest>&lt;SHA256_METADATA&gt;</premis:messageDigest>
+      </premis:fixity>
+      <premis:format>
+        <premis:formatDesignation><premis:formatName>XML</premis:formatName></premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+    <premis:creatingApplication>
+      <premis:creatingApplicationName>JTDR</premis:creatingApplicationName>
+      <premis:dateCreatedByApplication>2024-12-07T00:00:00+05:30</premis:dateCreatedByApplication>
+    </premis:creatingApplication>
+  </premis:object>
+
+  <!-- rep1 - originals -->
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>FilePath</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>representation/rep1/data/ODHC012342025_1_original.pdf</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCharacteristics>
+      <premis:compositionLevel>0</premis:compositionLevel>
+      <premis:size>&lt;SIZE_BYTES_ORIG1&gt;</premis:size>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>SHA-256</premis:messageDigestAlgorithm>
+        <premis:messageDigest>&lt;SHA256_ORIG1&gt;</premis:messageDigest>
+      </premis:fixity>
+      <premis:format><premis:formatDesignation><premis:formatName>PDF</premis:formatName></premis:formatDesignation></premis:format>
+      <premis:objectCharacteristicsExtension>
+        <receivingDate>2025-09-16T10:00:00+05:30</receivingDate>
+      </premis:objectCharacteristicsExtension>
+    </premis:objectCharacteristics>
+  </premis:object>
+
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>FilePath</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>representation/rep1/data/ODHC012342025_2_original.pdf</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCharacteristics>
+      <premis:compositionLevel>0</premis:compositionLevel>
+      <premis:size>&lt;SIZE_BYTES_ORIG2&gt;</premis:size>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>SHA-256</premis:messageDigestAlgorithm>
+        <premis:messageDigest>&lt;SHA256_ORIG2&gt;</premis:messageDigest>
+      </premis:fixity>
+      <premis:format><premis:formatDesignation><premis:formatName>PDF</premis:formatName></premis:formatDesignation></premis:format>
+      <premis:objectCharacteristicsExtension>
+        <receivingDate>2025-09-16T10:00:00+05:30</receivingDate>
+      </premis:objectCharacteristicsExtension>
+    </premis:objectCharacteristics>
+    <premis:creatingApplication>
+      <premis:creatingApplicationName>JTDR</premis:creatingApplicationName>
+      <premis:dateCreatedByApplication>2024-12-07T00:00:00+05:30</premis:dateCreatedByApplication>
+    </premis:creatingApplication>
+  </premis:object>
+
+  <!-- rep2 - converted -->
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>FilePath</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>representation/rep2/data/ODHC012342025_1_converted.pdf</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCharacteristics>
+      <premis:compositionLevel>0</premis:compositionLevel>
+      <premis:size>&lt;SIZE_BYTES_CONV1&gt;</premis:size>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>SHA-256</premis:messageDigestAlgorithm>
+        <premis:messageDigest>&lt;SHA256_CONV1&gt;</premis:messageDigest>
+      </premis:fixity>
+      <premis:format><premis:formatDesignation><premis:formatName>PDF/A-1B</premis:formatName></premis:formatDesignation></premis:format>
+    </premis:objectCharacteristics>
+    <premis:creatingApplication>
+      <premis:creatingApplicationName>JTDR</premis:creatingApplicationName>
+      <premis:dateCreatedByApplication>2024-12-07T00:00:00+05:30</premis:dateCreatedByApplication>
+    </premis:creatingApplication>
+    <premis:relationship>
+      <premis:relationshipElement>
+        <premis:relationshipSubType>derivedFrom</premis:relationshipSubType>
+        <premis:relatedObjectIdentifier>
+          <premis:relatedObjectIdentifierType>FilePath</premis:relatedObjectIdentifierType>
+          <premis:relatedObjectIdentifierValue>representation/rep1/data/ODHC012342025_1_original.pdf</premis:relatedObjectIdentifierValue>
+        </premis:relatedObjectIdentifier>
+      </premis:relationshipElement>
+    </premis:relationship>
+  </premis:object>
+
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>FilePath</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>representation/rep2/data/ODHC012342025_2_converted.pdf</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCharacteristics>
+      <premis:compositionLevel>0</premis:compositionLevel>
+      <premis:size>&lt;SIZE_BYTES_CONV2&gt;</premis:size>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>SHA-256</premis:messageDigestAlgorithm>
+        <premis:messageDigest>&lt;SHA256_CONV2&gt;</premis:messageDigest>
+      </premis:fixity>
+      <premis:format><premis:formatDesignation><premis:formatName>PDF/A-1B</premis:formatName></premis:formatDesignation></premis:format>
+    </premis:objectCharacteristics>
+    <premis:creatingApplication>
+      <premis:creatingApplicationName>JTDR</premis:creatingApplicationName>
+      <premis:dateCreatedByApplication>2024-12-07T00:00:00+05:30</premis:dateCreatedByApplication>
+    </premis:creatingApplication>
+    <premis:relationship>
+      <premis:relationshipElement>
+        <premis:relationshipSubType>derivedFrom</premis:relationshipSubType>
+        <premis:relatedObjectIdentifier>
+          <premis:relatedObjectIdentifierType>FilePath</premis:relatedObjectIdentifierType>
+          <premis:relatedObjectIdentifierValue>representation/rep1/data/ODHC012342025_2_original.pdf</premis:relatedObjectIdentifierValue>
+        </premis:relatedObjectIdentifier>
+      </premis:relationshipElement>
+    </premis:relationship>
+  </premis:object>
+
+  <!-- schema -->
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>FilePath</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>schema/ecourt.xsd</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCharacteristics>
+      <premis:compositionLevel>0</premis:compositionLevel>
+      <premis:size>&lt;SIZE_BYTES_XSD&gt;</premis:size>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>SHA-256</premis:messageDigestAlgorithm>
+        <premis:messageDigest>&lt;SHA256_XSD&gt;</premis:messageDigest>
+      </premis:fixity>
+      <premis:format><premis:formatDesignation><premis:formatName>XSD</premis:formatName></premis:formatDesignation></premis:format>
+    </premis:objectCharacteristics>
+  </premis:object>
+
+  <!-- Events -->
+  <!-- ingest event -->
+  <!-- <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>eventID</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>EVT-INGEST-ODHC010879122024-001</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>ingest</premis:eventType>
+    <premis:eventDateTime>2025-09-16T10:00:00+05:30</premis:eventDateTime>
+    <premis:eventDetail>Ingest of SIP ODHC010879122024 into JDPS repository</premis:eventDetail>
+    <premis:eventOutcomeInformation><premis:eventOutcome>success</premis:eventOutcome></premis:eventOutcomeInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>system</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>JDPS-Repository</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>SIP-ID</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>ODHC010879122024</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event> -->
+
+  <!-- conversion events: one per original->converted -->
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>eventID</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>EVT-CONVERT-0001</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>format conversion</premis:eventType>
+    <premis:eventDateTime>2025-09-16T10:10:00+05:30</premis:eventDateTime>
+    <premis:eventDetail>Converted rep1/data/ODHC012342025_1_original.pdf → rep2/data/ODHC012342025_1_converted.pdf using PDFConv v2.1</premis:eventDetail>
+    <premis:eventOutcomeInformation><premis:eventOutcome>success</premis:eventOutcome></premis:eventOutcomeInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>system</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>PDFConv v2.1</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>FilePath</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>representation/rep1/data/ODHC012342025_1_original.pdf</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>FilePath</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>representation/rep2/data/ODHC012342025_1_converted.pdf</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>eventID</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>EVT-CONVERT-0002</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>format conversion</premis:eventType>
+    <premis:eventDateTime>2025-09-16T10:12:00+05:30</premis:eventDateTime>
+    <premis:eventDetail>Converted rep1/data/ODHC012342025_2_original.pdf → rep2/data/ODHC012342025_2_converted.pdf using PDFConv v2.1</premis:eventDetail>
+    <premis:eventOutcomeInformation><premis:eventOutcome>success</premis:eventOutcome></premis:eventOutcomeInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>system</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>PDFConv v2.1</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>FilePath</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>representation/rep1/data/ODHC012342025_2_original.pdf</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>FilePath</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>representation/rep2/data/ODHC012342025_2_converted.pdf</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+
+  <!-- Relationships linking intellectual object to key files -->
+  <premis:relationship>
+    <premis:relationshipElement>
+      <premis:relationshipSubType>hasMetadata</premis:relationshipSubType>
+      <premis:relatedObjectIdentifier>
+        <premis:relatedObjectIdentifierType>FilePath</premis:relatedObjectIdentifierType>
+        <premis:relatedObjectIdentifierValue>data/metadata/ODHC012342025_Metadata_ecourt.xml</premis:relatedObjectIdentifierValue>
+      </premis:relatedObjectIdentifier>
+    </premis:relationshipElement>
+
+    <premis:relationshipElement>
+      <premis:relationshipSubType>hasRepresentation</premis:relationshipSubType>
+      <premis:relatedObjectIdentifier>
+        <premis:relatedObjectIdentifierType>directory</premis:relatedObjectIdentifierType>
+        <premis:relatedObjectIdentifierValue>representation/rep1/</premis:relatedObjectIdentifierValue>
+      </premis:relatedObjectIdentifier>
+    </premis:relationshipElement>
+
+    <premis:relationshipElement>
+      <premis:relationshipSubType>hasRepresentation</premis:relationshipSubType>
+      <premis:relatedObjectIdentifier>
+        <premis:relatedObjectIdentifierType>directory</premis:relatedObjectIdentifierType>
+        <premis:relatedObjectIdentifierValue>representation/rep2/</premis:relatedObjectIdentifierValue>
+      </premis:relatedObjectIdentifier>
+    </premis:relationshipElement>
+
+    <premis:relationshipElement>
+      <premis:relationshipSubType>hasSchema</premis:relationshipSubType>
+      <premis:relatedObjectIdentifier>
+        <premis:relatedObjectIdentifierType>FilePath</premis:relatedObjectIdentifierType>
+        <premis:relatedObjectIdentifierValue>schema/ecourt.xsd</premis:relatedObjectIdentifierValue>
+      </premis:relatedObjectIdentifier>
+    </premis:relationshipElement>
+  </premis:relationship>
+
+</premis:premis>

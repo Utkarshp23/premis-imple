@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.ndpp.in/2020/eCOURTCASE" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:eCase="http://www.ndpp.in/2020/eCOURTCASE">
+
+    <element name="ecourtcase" type="eCase:eCourtCaseType"></element>
+    
+    <complexType name="eCourtCaseType">
+    	<sequence>
+    		<element name="e-Filing"
+    			type="eCase:e-FilingTypeInformation" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Caveat" type="eCase:CaveatTypeInformation"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="Case" type="eCase:CaseTypeInformation"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="FIR" type="eCase:FIRTypeInformation"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="Act" type="eCase:ActTypeInformation"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="Judge" type="eCase:JudgeTypeInformation"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="StatusOfCases"
+    			type="eCase:StatusOfCasesTypeInformation" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Order" type="eCase:OrderTypeInformation"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="Digitization"
+    			type="eCase:DigitizationTypeInformation" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="RecordRoom"
+    			type="eCase:RecordRoomTypeInformation" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="OldCase" type="eCase:OldCaseTypeInformation"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="Fixity" type="eCase:FixityType" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="DigitalSignatures"
+    			type="eCase:DigitalSignaturesType" maxOccurs="1" minOccurs="0">
+    		</element>
+    		<element name="AccessControl"
+    			type="eCase:AccessControlTypeInformation" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Provenance" type="eCase:ProvenanceType" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="e-FilingTypeInformation">
+    	<sequence>
+    		<element name="e-FilingNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="e-FilingType" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="e-FilingDate" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="e-FilingYear" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="CaveatTypeInformation">
+    	<sequence>
+    		<element name="CaveatInfo" type="eCase:CaveatType" maxOccurs="1" minOccurs="1"></element>
+    		<element name="CaveateeInfo" type="eCase:CaveateeType" maxOccurs="1" minOccurs="1"></element>
+    		<element name="CaveatorInfo" type="eCase:CaveatorType" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="CaveatorType">
+    	<sequence>
+            <element name="CaveatorSerialNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+            <element name="CaveatorName" type="string" maxOccurs="1" minOccurs="1"></element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="CaveateeType">
+    	<sequence>
+            <element name="CaveateeSerialNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+            <element name="CaveateeName" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="CaveatType">
+    	<sequence>
+    		<element name="CaveatNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="RegistrationDate" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="CaseTypeInformation">
+    	<sequence>
+    		<element name="CaseCNRNumber" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="CaseTypeCode" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="CaseTypeName" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<choice>
+    			<element name="CaseNumber" type="string" maxOccurs="1"
+    				minOccurs="1">
+    			</element>
+    			<element name="RegistrationNumber" type="string"
+    				maxOccurs="1" minOccurs="1">
+    			</element>
+    		</choice>
+    		<element name="RegistrationYear" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="RegistrationDate" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="NameOfState" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="NameOfDistrict" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<choice>
+    			<element name="NameOfHeadQuarter" type="string"
+    				maxOccurs="1" minOccurs="1">
+    			</element>
+    			<element name="NameOfTaluka" type="string" maxOccurs="1"
+    				minOccurs="1">
+    			</element>
+    		</choice>
+    		<element name="EstablishmentCode" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="EstablishmentName" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="CaseStatus" maxOccurs="1" minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="Pending"></enumeration>
+    					<enumeration value="Disposed"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="VirtualCourtCNR" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="FilingNumber" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="CaseNature" maxOccurs="1" minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="Criminal"></enumeration>
+    					<enumeration value="Civil"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="ConnectedCases" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Litigant"
+    			type="eCase:LitigantTypeInformation" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Advocate"
+    			type="eCase:AdvocateTypeInformation" maxOccurs="unbounded"
+    			minOccurs="1">
+    		</element>
+    		<element name="Subject" type="eCase:SubjectTypeInformation"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="Documents"
+    			type="eCase:DocumentsTypeinformation" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="LowerCourt" type="eCase:LowerCourtType" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="LowerCourtType">
+    	<sequence>
+    		<element name="LowerCourtCNRNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="FIRTypeInformation">
+    	<sequence>
+    		<element name="FIRInfo" type="eCase:FIRType" maxOccurs="1" minOccurs="1"></element>
+    		<element name="ChargesheetInfo" type="eCase:ChargesheetType" maxOccurs="1" minOccurs="1"></element>
+    		<element name="PolliceStationInfo" type="eCase:PoliceStationType" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="FIRType">
+    	<sequence>
+    		<element name="FIRNumber" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="FIRDate" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="FIRYear" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="FIRDistrict" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<choice>
+    			<element name="FIRTehsil" type="string" maxOccurs="1" minOccurs="1"></element>
+    			<element name="FIRTaluka" type="string" maxOccurs="1" minOccurs="1"></element>
+    		</choice>
+    		
+    	</sequence>
+    </complexType>
+
+    <complexType name="ChargesheetType">
+    	<choice>
+            <element name="ChargeSheetNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+            <element name="ChargeSheetDate" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</choice>
+    </complexType>
+
+    <complexType name="PoliceStationType">
+    	<sequence>
+    		<element name="PoliceStationCode" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="PoliceStationName" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="ActTypeInformation">
+    	<sequence>
+    		<element name="ActInfo" type="eCase:ActType" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ActType">
+    	<sequence>
+    		<element name="Act" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Section" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="JudgeInformation">
+    	<sequence>
+    		<element name="JOCode" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="JudgeName" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="JudgeDesignation" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="StatusOfCasesTypeInformation">
+    	<sequence>
+    		<element name="Purpose" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="SubPurpose" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="DateOfDisposal" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="DisposalType" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="OrderTypeInformation">
+    	<sequence>
+    		<element name="OrderType" maxOccurs="1" minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="Interim"></enumeration>
+    					<enumeration value="Zimmni"></enumeration>
+    					<enumeration value="FinalJudgment"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<choice>
+    			<element name="OrderDate" type="string" maxOccurs="1" minOccurs="1"></element>
+    			<element name="JudgementDate" type="string" maxOccurs="1" minOccurs="1"></element>
+    		</choice>
+    	</sequence>
+    </complexType>
+
+    <complexType name="DigitizationTypeInformation">
+    	<sequence>
+    		<element name="RecordNumber" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="DocumentOrientation" maxOccurs="1"
+    			minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="Portrait "></enumeration>
+    					<enumeration value="Landscape"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="NoOfPages" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="StatusOfDocument" maxOccurs="1"
+    			minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="Original"></enumeration>
+    					<enumeration value="PhotoCopy"></enumeration>
+    					<enumeration value="CarbonCopy"></enumeration>
+    					<enumeration value="CertifiedCopy"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+            <element name="DocumentType" type="string" maxOccurs="1" minOccurs="1">
+    		</element>
+            <element name="ComparisonOfSource" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="LegibilityOfText	" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="QualityOfImages" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="DigitizationDateTime" type="dateTime"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="MasterFile" type="eCase:MasterFileType"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="SpecialConsiderations" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="EditsPerformed" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="IntegrityOfDigitizedRecord" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="AgentName" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="CaptureDeviceName" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="DateOfLastCalibrationOfDevice" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="VerifiedBy" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RecordRoomTypeInformation">
+    	<sequence>
+    		<element name="DateOfReceipt" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<choice>
+    			<element name="BlockNo" type="string" maxOccurs="1"
+    				minOccurs="1">
+    			</element>
+    			<element name="RoomNo" type="string" maxOccurs="1"
+    				minOccurs="1">
+    			</element>
+    		</choice>
+    		<element name="AlmiraNo" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+            <element name="RackNo" type="string" maxOccurs="1" minOccurs="0"></element>
+            <element name="BriefJudgemnt" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="OldCaseTypeInformation">
+    	<sequence>
+    		<element name="OldCaseCNRNumber" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="OldCaseNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="LitigantTypeInformation">
+    	<sequence>
+    		<element name="Petitioner"
+    			type="eCase:PetitionerTypeInformation" maxOccurs="unbounded"
+    			minOccurs="1">
+    		</element>
+            <element name="Respondent" type="eCase:RespondentTypeInformation" maxOccurs="unbounded" minOccurs="1">
+    		</element>
+            <element name="PetitionerExtraParty"
+    			type="eCase:PetitionerTypeInformation" maxOccurs="unbounded"
+    			minOccurs="0">
+    		</element>
+    		<element name="RespondentExtraParty"
+    			type="eCase:RespondentTypeInformation" maxOccurs="unbounded"
+    			minOccurs="0">
+    		</element>
+    		<element name="PetitionerExtraAdvocate" type="eCase:AdvocateTypeInformation" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="RespondentExtraAdvocate" type="eCase:AdvocateTypeInformation" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RespondentTypeInformation">
+    	<sequence>
+    		<element name="RespondentSerialNumber" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="RespondentName" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="RespondentID" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="RespondentGender" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="RespondentOrganization" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="RespondentEmailId" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="RespondentPhoneNumber" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="RespondentAddress" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="PetitionerTypeInformation">
+    	<sequence>
+    		<element name="PetitionerSerialNumber" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="PetitionerName" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="PetitionerID" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="PetitionerGender" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="PetitionerOrganization" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="PetitionerEmailId" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="PetitionerPhoneNumber" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="PetitionerAddress" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="AdvocateTypeInformation">
+    	<sequence>
+    		<element name="AdvocateSerialNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="AdvocateName" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="AdvocateType" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="AdvocateBarNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<choice>
+    			<element name="PetitionerSerialNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+    			<element name="RespondentSerialNumber" type="string" maxOccurs="1" minOccurs="1"></element>
+    		</choice>
+    	</sequence>
+    </complexType>
+
+    <complexType name="SubjectTypeInformation">
+    	<sequence>
+    		<element name="Subject" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Category" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="SubCategory" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="PrayerOfCase" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Keywords" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="DocumentsTypeinformation">
+    	<sequence>
+    		<element name="Document" type="eCase:DocumentType" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="DocumentType">
+    	<sequence>
+    		<element name="DocumentNumber" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="DateOfDocument" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="NatureOfDocument" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<choice>
+    			<element name="FiledBySrNoOfPetitioner" type="string"
+    				maxOccurs="1" minOccurs="1">
+    			</element>
+    			<element name="FiledBySrNoOfRespondent" type="string" maxOccurs="1" minOccurs="1"></element>
+    			<element name="FiledBySrNoOfAdvocate" type="string" maxOccurs="1" minOccurs="1"></element>
+    		</choice>
+    	</sequence>
+    </complexType>
+
+    <complexType name="FixityType">
+    	<sequence>
+    		<element name="Checksum" type="eCase:ChecksumType" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ChecksumType">
+    	<attribute name="algorithm" type="string"></attribute>
+    </complexType>
+
+    <complexType name="DigitalSignaturesType">
+    	<sequence>
+    		<element name="DigitalSignature" type="eCase:DigitalSignatureType" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="DigitalSignatureType">
+    	<sequence>
+    		<element name="Signer" type="eCase:SignerType" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="SigningTime" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Reason" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Location" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Signature" type="eCase:SignatureType" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Issuer" type="eCase:IssuerType" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="SignerType">
+    	<sequence>
+    		<element name="CommonName" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Email" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="State" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+            <element name="Location" type="string" maxOccurs="1" minOccurs="0"></element>
+            <element name="OrganizationUnit" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Organization" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Country" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="IssuerType">
+    	<sequence>
+    		<element name="CommonName" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Email" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="State" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="OrganizationUnit" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Organization" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Country" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="SignatureType">
+    	<sequence>
+    		<element name="Validity" type="eCase:ValidityType" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ValidityType">
+    	<sequence>
+    		<element name="Starts" type="dateTime" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Ends" type="dateTime" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="MasterFileType">
+    	<sequence>
+    		<element name="FileName" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="FileSize" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="FileFormat" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="AccessControlTypeInformation">
+    		<sequence>
+    			<element name="Disclosure" type="eCase:DisclosureType" maxOccurs="1" minOccurs="1"></element>
+    		</sequence>
+    </complexType>
+
+    <complexType name="DisclosureType">
+    	<attribute name="disclosureClassification">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="PUBLIC"></enumeration>
+    				<enumeration value="PRIVATE"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="JudgeTypeInformation">
+    	<sequence>
+    		<element name="JudgeInfo" type="eCase:JudgeInformation" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ProvenanceType">
+    	<sequence>
+    		<element name="Origin" type="eCase:OriginType" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Migration" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="OriginType">
+    	<sequence>
+    		<element name="Organization" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="GeographicalAddress" type="eCase:GeographicalAddressType"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="DeviceAddress" type="eCase:DeviceAddressType" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="GeographicalAddressType">
+    	<sequence>
+    		<element name="Street" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Village" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="SubDistrict" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="District" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="State" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="PIN" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="DeviceAddressType">
+    	<sequence>
+    		<element name="IPAddress" type="eCase:IpAddressType" maxOccurs="1" minOccurs="1"></element>
+    		<element name="MACAddress" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="IpAddressType">
+    	<simpleContent>
+    		<extension base="string">
+    			<attribute name="version" type="string"></attribute>
+    		</extension>
+    	</simpleContent>
+    </complexType>
+</schema>

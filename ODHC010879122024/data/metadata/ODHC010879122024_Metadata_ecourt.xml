@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Jdps:ecourtcase xmlns:Jdps="http://www.ndpp.in/2020/eCOURTCASE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ndpp.in/2020/eCOURTCASE eCOURTCASE.xsd">
+    <Jdps:e-Filing>
+        <Jdps:e-FilingNumber>36837</Jdps:e-FilingNumber>
+        <Jdps:e-FilingDate>2024-12-06</Jdps:e-FilingDate>
+        <Jdps:e-FilingYear>2024</Jdps:e-FilingYear>
+    </Jdps:e-Filing>
+    <Jdps:Case>
+        <Jdps:CaseCNRNumber>ODHC010879122024</Jdps:CaseCNRNumber>
+        <Jdps:CaseTypeCode>7</Jdps:CaseTypeCode>
+        <Jdps:CaseTypeName>BLAPL : BLAPL-Bail Application.</Jdps:CaseTypeName>
+        <Jdps:RegistrationNumber>12353</Jdps:RegistrationNumber>
+        <Jdps:RegistrationYear>2024</Jdps:RegistrationYear>
+        <Jdps:RegistrationDate>2024-12-07</Jdps:RegistrationDate>
+        <Jdps:NameOfState>ORISSA</Jdps:NameOfState>
+        <Jdps:NameOfDistrict>Koraput</Jdps:NameOfDistrict>
+        <Jdps:EstablishmentCode>ODHC01</Jdps:EstablishmentCode>
+        <Jdps:EstablishmentName>High Court of Orissa</Jdps:EstablishmentName>
+        <Jdps:CaseStatus>D</Jdps:CaseStatus>
+        <Jdps:FilingNumber>36837</Jdps:FilingNumber>
+        <Jdps:CaseNature>Criminal Section</Jdps:CaseNature>
+        <Jdps:Litigant>
+            <Jdps:Petitioner>
+                <Jdps:PetitionerName>CHARITRA KHARA</Jdps:PetitionerName>
+            </Jdps:Petitioner>
+            <Jdps:Respondent>
+                <Jdps:RespondentName>STATE OF ODISHA</Jdps:RespondentName>
+            </Jdps:Respondent>
+        </Jdps:Litigant>
+        <Jdps:Advocate>
+            <Jdps:AdvocateName>MANORANJAN PADHY</Jdps:AdvocateName>
+            <Jdps:AdvocateType>Petitioner</Jdps:AdvocateType>
+        </Jdps:Advocate>
+        <Jdps:Subject>
+            <Jdps:Subject>CRIMINAL MATTERS ( 9 )</Jdps:Subject>
+            <Jdps:Category>CRIMINAL MATTERS RELATING TO BAIL/INTERIM BAIL/ANTICIPATORY BAIL/PAROLE ( 10 )</Jdps:Category>
+            <Jdps:SubCategory>Regular Bail Applications ( 1 )</Jdps:SubCategory>
+        </Jdps:Subject>
+        <Jdps:LowerCourt>
+            <Jdps:LowerCourtCNRNumber>CT - 0000041 - 2020</Jdps:LowerCourtCNRNumber>
+        </Jdps:LowerCourt>
+    </Jdps:Case>
+    <Jdps:FIR>
+        <Jdps:FIRInfo>
+            <Jdps:FIRNumber>58                                                                                                  </Jdps:FIRNumber>
+            <Jdps:FIRYear>2020</Jdps:FIRYear>
+        </Jdps:FIRInfo>
+        <Jdps:PolliceStationInfo>
+            <Jdps:PoliceStationCode>290</Jdps:PoliceStationCode>
+            <Jdps:PoliceStationName>DASMANTAPUR</Jdps:PoliceStationName>
+        </Jdps:PolliceStationInfo>
+    </Jdps:FIR>
+    <Jdps:Act>
+        <Jdps:ActInfo>
+            <Jdps:Act>CRIMINAL PROCEDURE CODE, 1973</Jdps:Act>
+            <Jdps:Section>439</Jdps:Section>
+        </Jdps:ActInfo>
+    </Jdps:Act>
+    <Jdps:Judge>
+        <Jdps:JudgeInfo>
+            <Jdps:JudgeName>MR. JUSTICE GOURISHANKAR SATAPATHY</Jdps:JudgeName>
+            <Jdps:JudgeDesignation>Judge</Jdps:JudgeDesignation>
+        </Jdps:JudgeInfo>
+    </Jdps:Judge>
+    <Jdps:StatusOfCases>
+        <Jdps:Purpose>FOR ORDERS - (TIED UP MATTERS)</Jdps:Purpose>
+        <Jdps:DisposalType>Disposed Off</Jdps:DisposalType>
+    </Jdps:StatusOfCases>
+    <Jdps:Order>
+        <Jdps:JudgementDate>2025-01-30</Jdps:JudgementDate>
+    </Jdps:Order>
+    <Jdps:Provenance>
+        <Jdps:Origin>
+            <Jdps:DeviceAddress>
+                <Jdps:IPAddress version="V4">10.208.23.140</Jdps:IPAddress>
+                <Jdps:MACAddress>F4-B5-20-39-19-BA</Jdps:MACAddress>
+            </Jdps:DeviceAddress>
+        </Jdps:Origin>
+    </Jdps:Provenance>
+</Jdps:ecourtcase>
