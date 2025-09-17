@@ -376,7 +376,7 @@ public void addFileObjectUsingJaxbClasses(String objectIdentifierValue,
         try {
             FixityComplexType fix = new FixityComplexType();
             // set algorithm
-            try { fix.setMessageDigestAlgorithm(digestAlgo); } catch (Throwable t) {
+            try { fix.setMessageDigestAlgorithm(spa(digestValue)); } catch (Throwable t) {
                 try { Method m = fix.getClass().getMethod("setMessageDigestAlgorithm", StringPlusAuthority.class); m.invoke(fix, spa(digestAlgo)); } catch (Throwable ignored) {}
             }
             // set digest
@@ -419,14 +419,17 @@ public void addFileObjectUsingJaxbClasses(String objectIdentifierValue,
             FormatComplexType fmt = new FormatComplexType();
             FormatDesignationComplexType fd = new FormatDesignationComplexType();
             // fd.getFormatName() typically returns List<String>
-            try {
-                fd.getFormatName().add(formatName);
+           try {
+                // use helper spa(...) which builds StringPlusAuthority
+                fd.setFormatName(spa(formatName));
             } catch (Throwable t) {
-                // try setter
+                // fallback: attempt to call setter via reflection if signature differs (unlikely here)
                 try {
-                    Method setFmtName = fd.getClass().getMethod("setFormatName", String.class);
-                    setFmtName.invoke(fd, formatName);
-                } catch (Throwable ignored) {}
+                    Method setFmtName = fd.getClass().getMethod("setFormatName", StringPlusAuthority.class);
+                    setFmtName.invoke(fd, spa(formatName));
+                } catch (Throwable ignored) {
+                    LOG.fine("Could not set formatName via setter: " + ignored.getMessage());
+                }
             }
             // attach fd to fmt
             try {
